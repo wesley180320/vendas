@@ -38,7 +38,7 @@ public class DemoApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 
-		Cliente c1 = new Cliente(null, "joao", "08913476168");
+		Cliente c1 = new Cliente(null, "joao", "08213476166");
 		Pedido p1 = new Pedido(c1, null,12, Status.valueOf("Realizado"));
 		Produto pr1 = new Produto(null,"TV");
 		ItemPedido it1 = new ItemPedido(null,p1,pr1,2);

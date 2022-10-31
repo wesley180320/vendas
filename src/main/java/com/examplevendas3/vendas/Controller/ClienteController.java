@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,7 +33,7 @@ public class ClienteController {
     }
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public ResponseEntity<Object> save(@RequestBody Cliente cliente){
+    public ResponseEntity<Object> save(@RequestBody @Valid Cliente cliente){
 
         Cliente obj = clienteService.save(cliente);
 

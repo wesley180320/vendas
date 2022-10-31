@@ -3,6 +3,7 @@ package com.examplevendas3.vendas.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ public class Produto  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @NotEmpty(message = "Campo Descrição é obrigatório. ")
     private String descricao;
 
     @OneToMany(mappedBy = "produto", cascade = CascadeType.ALL)

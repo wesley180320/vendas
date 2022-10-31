@@ -1,6 +1,9 @@
 package com.examplevendas3.vendas.domain;
 
+import org.hibernate.validator.constraints.br.CPF;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +17,13 @@ public class Cliente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @NotEmpty(message = "Campo nome e obrigatório")
     private String name;
 
     @Column(length = 11)
+    @NotEmpty(message = "Campo CPF obrigatório")
+    @CPF(message = "Informe um CPF válido.")
     private String cpf;
 
     @OneToMany(mappedBy ="cliente", cascade = CascadeType.ALL)

@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -71,7 +72,7 @@ public class ProdutoController {
     }
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public ResponseEntity<Object> save (@RequestBody Produto produto){
+    public ResponseEntity<Object> save (@RequestBody @Valid Produto produto){
 
 
         Produto produto1 = produtoService.save(produto);
