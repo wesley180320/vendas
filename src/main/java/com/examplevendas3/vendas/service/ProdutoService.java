@@ -1,4 +1,4 @@
-package com.examplevendas3.vendas.Service;
+package com.examplevendas3.vendas.service;
 
 import com.examplevendas3.vendas.domain.Produto;
 import com.examplevendas3.vendas.repository.ProdutoRespository;

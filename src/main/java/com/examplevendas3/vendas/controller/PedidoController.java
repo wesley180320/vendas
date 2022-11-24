@@ -1,8 +1,8 @@
-package com.examplevendas3.vendas.Controller;
+package com.examplevendas3.vendas.controller;
 
 
 import com.examplevendas3.vendas.DTO.PedidoDTO;
-import com.examplevendas3.vendas.Service.PedidoService;
+import com.examplevendas3.vendas.service.PedidoService;
 
 
 import com.examplevendas3.vendas.domain.Pedido;

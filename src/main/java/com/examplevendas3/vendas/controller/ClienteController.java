@@ -1,6 +1,6 @@
-package com.examplevendas3.vendas.Controller;
+package com.examplevendas3.vendas.controller;
 
-import com.examplevendas3.vendas.Service.ClienteService;
+import com.examplevendas3.vendas.service.ClienteService;
 import com.examplevendas3.vendas.domain.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

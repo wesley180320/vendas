@@ -1,4 +1,4 @@
-package com.examplevendas3.vendas.Service;
+package com.examplevendas3.vendas.service;
 
 public class RegraDeNegocioException extends RuntimeException {
 
