@@ -38,17 +38,7 @@ public class DemoApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 
-		Cliente c1 = new Cliente(null, "joao", "08213476166");
-		Pedido p1 = new Pedido(c1, null,12, Status.valueOf("Realizado"));
-		Produto pr1 = new Produto(null,"TV");
-		ItemPedido it1 = new ItemPedido(null,p1,pr1,2);
-		c1.getPedidos().add(p1);
-		pr1.getItemPedidos().add(it1);
 
-		clienteRepository.save(c1);
-		pedidoRepository.save(p1);
-		produtoRespository.save(pr1);
-		itemPedidoRepository.save(it1);
 
 
 

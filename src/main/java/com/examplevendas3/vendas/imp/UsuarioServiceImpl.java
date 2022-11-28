@@ -24,6 +24,22 @@ public class UsuarioServiceImpl implements UserDetailsService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
+
+    public UserDetails autenticar(Usuario usuario){
+
+       UserDetails usuarioDetails = loadUserByUsername(usuario.getLogin());
+       boolean senhasBatem = passwordEncoder.matches(usuario.getSenha(), usuarioDetails.getPassword() );
+
+       if(senhasBatem){
+
+           return usuarioDetails;
+
+       }
+
+       throw new RuntimeException("Semha Invalida");
+
+    }
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 

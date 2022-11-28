@@ -37,6 +37,7 @@ public class Pedido implements Serializable {
         this.cliente = cliente;
         this.id = id;
         this.total = total;
+        this.status = status;
     }
 
     public Cliente getCliente() {

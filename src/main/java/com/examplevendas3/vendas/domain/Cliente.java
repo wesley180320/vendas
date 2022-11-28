@@ -35,7 +35,7 @@ public class Cliente implements Serializable {
     public Cliente(Integer id, String name, String cpf) {
         this.id = id;
         this.name = name;
-        this.cpf = cpf;
+//        this.cpf = cpf;
     }
 
     public Integer getId() {
